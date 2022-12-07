@@ -1,0 +1,43 @@
+// Color
+$brown: #2b2520;
+$green: #39dbc2;
+$pink: #f41fbf;
+$yellow: #ffed28;
+$purple: #b028ff;
+$blue: #49A7FF;
+$red: #ff3838;
+$orange: #db7953;
+
+// Size
+$extra-large: 30px;
+$large: 40px;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.empty {
+    $stroke-width: $extra-large * 0.05;
+    position: relative;
+    display: inline-block;
+    font-size: $extra-large;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-style: italic;
+    color: transparent;
+    -webkit-text-stroke-width: $stroke-width;
+    -webkit-text-stroke-color: white;
+    // white-space: nowrap;
+    // $x: 12px;
+    // $y: 15px;
+    // $step: 1px;
+        
+    // text-shadow: $x $y $green,
+    //              $x + $step $y + $step $pink,
+    //              $x + $step * 2 $y + $step * 2 $pink,
+    //              $x + $step * 3 $y + $step * 3 $pink,
+    //              $x + $step * 4 $y + $step * 4 $pink,
+    //              $x + $step * 5 $y + $step * 5 $pink,
+    //              $x + $step * 6 $y + $step * 6 $pink,
+    //              $x + $step * 7 $y + $step * 7 $pink,
+}

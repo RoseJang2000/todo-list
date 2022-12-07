@@ -1,0 +1,66 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #181824;
+}
+
+.App_todo {
+  height: 30rem;
+  width: 28rem;
+}
+
+.App_input_wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 2.5rem;
+  background-color: #25273c;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.App_input {
+  flex: 1;
+  outline: none;
+  border: none;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  background-color: transparent;
+  color: #fff;
+}
+
+.App_input_button {
+  width: 3rem;
+  height: 100%;
+  background-color: #F706b6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.App_todo_list {
+  background-color: #25273c;
+  height: 100%;
+  margin-top: 2rem;
+  overflow: auto;
+  border-radius: 15px;
+}
+
+.empty {
+  color: transparent;
+  text-align: center;
+  margin-top: 6rem;
+  font-size: 1.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-style: italic;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ddd;
+}

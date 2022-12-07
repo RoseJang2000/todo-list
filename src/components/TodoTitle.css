@@ -1,0 +1,11 @@
+.title_container {
+    width: 28rem;
+    height: 7rem;
+    /* margin-bottom: 1rem; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    color: #fff;
+    font-size: 3rem;
+}
+
