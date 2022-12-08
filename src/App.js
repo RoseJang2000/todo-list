@@ -87,7 +87,7 @@ function App() {
             type='text' 
             className='App_input' 
             value={todoText}
-            placeholder='Create new todo...'
+            placeholder='Create a new todo...'
             onChange={e => setTodoText(e.target.value)} />
           <div className='App_input_button' onClick={e => addTodo(e)}>
             <IoMdAdd size={24} />
