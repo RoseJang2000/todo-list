@@ -10,6 +10,8 @@
 
 <br/>
 
+https://rosejang2000.github.io/todo-list/
+
 React로 만든 Todo-list 앱입니다.
 
 - 할 일 추가 및 삭제
