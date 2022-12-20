@@ -21,17 +21,8 @@ function App() {
     };
 
     if (todoText !== '') {
-      setAllTodos([...allTodos, todoItem]);
+      setAllTodos((current) => [...current, todoItem]);
       setTodoText('');
-    }
-  };
-
-  /** localStorage에 있는 이전 todo 목록들을 불러와 allTodos에 담아준다 */
-  const getAllTodos = () => {
-    let stored = JSON.parse(localStorage.getItem('todo'));
-
-    if (stored) {
-      setAllTodos(stored);
     }
   };
 
@@ -71,14 +62,26 @@ function App() {
     setAllTodos(editTodo);
   };
 
+  /** localStorage에 있는 이전 todo 목록들을 불러와 allTodos에 담아준다 */
+  const getAllTodos = () => {
+    let stored = JSON.parse(localStorage.getItem('todo'));
+
+    if (stored) {
+      setAllTodos(stored);
+    }
+  };
+
+  // ! 처음 렌더링될 때 localStrage에서 아이템들 가져오기
   useEffect(() => {
     getAllTodos();
   }, []);
 
+  // ! allTodos가 바뀔 때마다 localStorage에 추가해주기
   useEffect(() => {
     localStorage.setItem('todo', JSON.stringify(allTodos));
   }, [allTodos]);
 
+  // ! 체크된 항목의 개수를 뺀 count 상태를 지정
   useEffect(() => {
     setCount(allTodos.length - allTodos.filter((todo) => todo.isChecked).length);
   }, [allTodos]);
@@ -99,7 +102,6 @@ function App() {
             <IoMdAdd size={24} />
           </div>
         </form>
-
         <div className="App_todo_list">
           {allTodos.map((todo) => (
             <ListItem
